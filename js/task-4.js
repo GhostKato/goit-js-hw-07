@@ -1,7 +1,5 @@
 const loginForm = document.querySelector(".login-form");
 
-loginForm.addEventListener("submit", funEvent)
-
 function funEvent(event) {
     event.preventDefault();
 
@@ -23,4 +21,15 @@ function funEvent(event) {
 }
 
 const passwordInput = loginForm.elements[1];
-passwordInput.setAttribute('placeholder', 'Type area');
+
+function placeholderActive() {
+passwordInput.setAttribute('placeholder', 'Type area');  
+}
+
+function placeholderOff() {
+passwordInput.setAttribute('placeholder', '');  
+}
+
+loginForm.addEventListener("submit", funEvent)
+passwordInput.addEventListener("click", placeholderActive);
+passwordInput.addEventListener("blur", placeholderOff);
