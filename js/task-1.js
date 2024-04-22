@@ -14,4 +14,8 @@ mainItem.forEach((item) => {
     console.log("Elements:", lengthList);
 });
 
+// const listCategories = mainItem.querySelectorAll(`ul`);
+// listCategories.classList.add(`list-ategories`);
 
+// const itemCategories = listCategories.querySelectorAll(`li`);
+// itemCategories.classList.add(`item-categories`);

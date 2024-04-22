@@ -21,3 +21,6 @@ function funEvent(event) {
         alert("All form fields must be filled in");        
     }
 }
+
+const passwordInput = loginForm.elements[1];
+passwordInput.setAttribute('placeholder', 'Type area');
