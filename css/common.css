@@ -267,7 +267,6 @@ h1 {
   border-radius: 8px;
   background: #f6f6fe;
   margin-bottom: 16px;
-  width: 486px;
 }
 
 #boxes {
@@ -276,7 +275,6 @@ h1 {
   gap: 44px;
   border-radius: 8px;
   background: #f6f6fe;
-  width: 486px;
   flex-shrink: 0;
 }
 

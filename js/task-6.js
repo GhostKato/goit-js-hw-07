@@ -16,10 +16,6 @@ function createFunction() {
   if (amout >= 1 && amout <= 100) {
     createBoxes(amout);
     input.value = '';
-  }
-
-  else {
-    alert(`Введіть число від 1 до 100`);
   }  
 } 
 
@@ -29,32 +25,19 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i++) {
     
-    const box = document.createElement('div');
-    const size = 30 + i * 10;
+    const box = document.createElement('div');   
     
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor()
+    box.style.width = `${30 + i * 10}px`;
+    box.style.height = `${30 + i * 10}px`;
+    
+    box.style.backgroundColor = getRandomHexColor();
     boxContainer.appendChild(box);
-
-    if (amount > 5) {     
-      boxContainer.style.width = `auto`;
-      controlsContainer.style.width = boxContainer.style.width;
-    }
-    
-    if (amount < 6) {
-      boxContainer.style.width = `486px`;
-      controlsContainer.style.width = `486px`;
-    }
+        }
   }
-}
 
 function destroyBoxes() {
   boxContainer.innerHTML = '';
-  
-  boxContainer.style.width = `486px`;
-  controlsContainer.style.width = `486px`;
-}
+  }
 
 createBatton.addEventListener(`click`, createFunction);
 destroyButton.addEventListener(`click`, destroyBoxes);
