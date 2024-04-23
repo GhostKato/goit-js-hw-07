@@ -37,11 +37,15 @@ function createBoxes(amount) {
     box.style.backgroundColor = getRandomHexColor()
     boxContainer.appendChild(box);
 
-    if (amount > 5) { 
-    const boxContainerSize = 550 + (54 * amount);
-      boxContainer.style.width = `${boxContainerSize}px`;
-      controlsContainer.style.width = `${boxContainerSize}px`;
-  }
+    if (amount > 5) {     
+      boxContainer.style.width = `auto`;
+      controlsContainer.style.width = boxContainer.style.width;
+    }
+    
+    if (amount < 6) {
+      boxContainer.style.width = `486px`;
+      controlsContainer.style.width = `486px`;
+    }
   }
 }
 
