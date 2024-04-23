@@ -86,8 +86,7 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  max-height: 100%;
 }
 
 .gallery {
@@ -98,15 +97,16 @@ img {
   padding: 100px 156px;
   row-gap: 48px;
   column-gap: 24px;
+  margin: 0 auto;
 }
 
 .gallery-item {
   width: 360px;
   height: 300px;
-  object-fit: contain;
-  /* flex-basis: calc((100% - 2 * 24) / 3); */
+  object-fit: cover;
   background: url(<path-to-image>) lightgray -0.011px -77px / 100.006% 150%
     no-repeat;
+  overflow: hidden;
 }
 
 /* Task 3 ///////////////////////////////////////////////////////////////////////// */
@@ -118,7 +118,6 @@ img {
   border-radius: 4px;
   border: 1px solid #808080;
   padding-left: 16px;
-  background-color: #fff;
 }
 
 #name-input::placeholder {
@@ -139,6 +138,7 @@ h1 {
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.04em;
+  padding-top: 16px;
 }
 
 /* Task 4 ///////////////////////////////////////////////////////////////////////// */
@@ -211,6 +211,7 @@ h1 {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  margin-top: 16px;
 }
 
 .login-form button:hover {
@@ -266,6 +267,7 @@ h1 {
   border-radius: 8px;
   background: #f6f6fe;
   margin-bottom: 16px;
+  width: 486px;
 }
 
 #boxes {
@@ -274,6 +276,8 @@ h1 {
   gap: 44px;
   border-radius: 8px;
   background: #f6f6fe;
+  width: 486px;
+  flex-shrink: 0;
 }
 
 #controls input {
