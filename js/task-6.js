@@ -11,7 +11,9 @@ const input = document.querySelector('input[type="number"]');
 
 function createBoxes() {  
   const amount = Number(input.value);
-  
+
+  const fragment = document.createDocumentFragment();
+
   boxContainer.innerHTML = '';
 
   if (amount >= 1 && amount <= 100) {
@@ -25,8 +27,9 @@ function createBoxes() {
       box.style.height = `${size}px`;
     
       box.style.backgroundColor = getRandomHexColor();
-      boxContainer.appendChild(box);
+      fragment.appendChild(box);
     }
+    boxContainer.appendChild(fragment);
     input.value = '';
   }
   }
